@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 
+// API responses
 app.get('/api/customers', (req, res) => {
   const customers = [
     {id: 1, firstName: 'John', lastName: 'Doe'},

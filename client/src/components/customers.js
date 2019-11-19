@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './customers.css';
 
 class Customers extends Component {
@@ -19,6 +20,7 @@ class Customers extends Component {
     return (
       <div>
         <h2>Customers</h2>
+        <Link to="/">Link</Link>
         <ul>
         {this.state.customers.map(customer => 
           <li key={customer.id}>{customer.firstName} {customer.lastName}</li>

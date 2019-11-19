@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Customers from './components/customers';
+import { BrowserRouter, Route } from 'react-router-dom'
+import ContentUnlocked from './components/ContentUnlocked';
+import ContentLocked from './components/ContentLocked';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">React Express Starter</h1>
-        </header>
-        <Customers />
+        <BrowserRouter>
+          <div>
+            <Route path="/" exact component={ContentLocked} />
+            <Route path="/pagetwo" exact component={ContentUnlocked} />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
